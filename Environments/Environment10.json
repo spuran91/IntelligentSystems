@@ -1,0 +1,50 @@
+{
+    "resolution": 100,
+    "initial_state": [10, 10],
+    "goal_state": [45, 27],
+    "obstacles": [
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [10, 35],
+                    [20, 35],
+                    [20, 25],
+                    [10, 25]
+                ]
+            }
+        },
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [35, 25],
+                    [45, 25],
+                    [45, 15],
+                    [35, 15]
+                ]
+            }
+        },
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [15, 20],
+                    [25, 20],
+                    [25, 10],
+                    [15, 10]
+                ]
+            }
+        },
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [17, 47],
+                    [30, 37],
+                    [30, 5]
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "resolution": 100,
+    "initial_state": [20, 20],
+    "goal_state": [50, 20],
+    "obstacles": [
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [8, 10],
+                    [8, 20],
+                    [18, 20],
+                    [18, 10]
+
+                ]
+            }
+        },
+        {
+            "shape": "polygon",
+            "property": {
+                 "vertices": [
+                     [10, 22],
+                     [15, 30],
+                     [12, 37]
+
+                 ]
+            }
+        },
+        {
+                    "shape": "polygon",
+                    "property": {
+                        "vertices": [
+                            [20, 44],
+                            [22, 38],
+                            [25, 42],
+                            [24,48]
+
+                        ]
+                    }
+                },
+      {
+                    "shape": "polygon",
+                    "property": {
+                        "vertices": [
+                            [28, 40],
+                            [36, 40],
+                            [36, 28],
+                            [28,28]
+
+                        ]
+                    }
+                },
+      {
+                    "shape": "polygon",
+                    "property": {
+                        "vertices": [
+                            [38, 38],
+                            [39, 41],
+                            [42, 40],
+                            [40,27]
+
+
+                        ]
+                    }
+                },
+      {
+        "shape": "polygon",
+        "property": {
+          "vertices": [
+            [22,10],
+            [22,33],
+            [24,33],
+            [24,10]
+
+    ]
+}
+}
+,
+      {
+        "shape": "polygon",
+        "property": {
+          "vertices": [
+            [60,25],
+            [60,10],
+            [48,10],
+            [48,50],
+            [60,50],
+            [60,48],
+            [50,48],
+            [50,12],
+            [58,12],
+            [58,25]
+
+    ]
+}
+}
+    ,
+      {
+        "shape": "polygon",
+        "property": {
+          "vertices": [
+            [22,60],
+            [65,60],
+            [65,55],
+            [22,55]
+
+          ]
+        }
+      }
+    ,
+      {
+        "shape": "polygon",
+        "property": {
+          "vertices": [
+            [42,25],
+            [42,16],
+            [32,16],
+            [35,19]
+
+          ]
+        }
+      }
+
+    ]
+}

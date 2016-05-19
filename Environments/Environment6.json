@@ -1,0 +1,23 @@
+{
+    "resolution": 100,
+    "initial_state": [35, 15],
+    "goal_state": [15, 15],
+    "obstacles": [
+        {
+            "shape": "polygon",
+            "property": {
+                "vertices": [
+                    [5, 20],
+                    [15, 30],
+                    [30, 30],
+                    [30, 0],
+                    [25,0],
+                    [25,23],
+                    [10,23],
+                    [5,20]
+                ]
+            }
+        }
+        
+    ]
+}

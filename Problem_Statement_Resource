@@ -1,0 +1,59 @@
+Pieter Norvig, Artificial Intelligence, a mordern approach. 3rd edition
+
+3.7 Consider the problem of finding the shortest path between two points on a plane that has
+convex polygonal obstacles as shown in Figure 3.31. This is an idealization of the problem
+that a robot has to solve to navigate in a crowded environment.
+a. Suppose the state space consists of all positions (a',1)) in the plane. How many states
+are there? How many paths are there to the goal?
+b. Explain briefly why the shortest path from one polygon vertex to any other in the scene
+must consist of straight-line segments joining some of the vertices of the polygons.
+Define a good state space now. How large is this state space?
+c. Define the necessary functions to implement the search problem, including an ACTIONS
+function that takes a vertex as input and returns a set of vectors, each of which maps the
+current vertex to one of the vertices that can be reached in a straight line. (Do not forget
+the neighbors on the same polygon.) Use the straight-line distance for the heuristic
+function.
+d. Apply one or more of the algorithms in this chapter to solve a range of problems in the
+domain, and comment on their performance.
+
+4.11. We can turn the navigation problem in Exercise 3.7 into an environment as follows:
+• The percept will be a list of the positions, relative to the agent, of the visible vertices.
+The percept does not include the position of the robot! The robot must learn its own po-
+sition from the map; for now, you can assume that each location has a different 'view."
+• Each action will be a vector describing a straight-fine path to follow. If the path is
+unobstructed, the action succeeds; otherwise, the robot stops at the point where its
+path first intersects an obstacle. If the agent returns a zero motion vector and is at the
+goal (which is fixed and known), then the environment teleports the agent to a random
+location (not inside an obstacle).
+• The performance measure charges the agent l point for each unit of distance traversed
+and awards 1000 points each time the goal is reached.
+a. Implement this environment and a problem-solving agent for it. After each teleporta-
+tion, the agent will need to formulate a new problem, which will involve discovering its
+current location.
+b. Document your agent's performance (by having the agent generate suitable commentary
+as it moves around) and report its performance over 100 episodes.
+c. Modify the environment so that 30% of the time the agent ends up at an unintended
+destination (chosen randomly from the other visible vertices if any: otherwise, no move
+at all). This is a crude model of the motion errors of a real robot. Modify the agent
+so that when such an error is detected, it finds out where it is and then constructs a
+plan to get back to where it was and resume the old plan. Remember that sometimes
+getting back to where it was might also fail! Show an example of the agent successfully
+overcoming two successive motion errors and still reaching the goal.
+d. Now try two different recovery schemes after an error: (I) head for the closest vertex on
+the original route; and (2) replan a route to the goal from the new location. Compare the
+performance of the three recovery schemes. Would the inclusion of search costs affect
+the comparison?
+e. Now suppose that there are locations from which the view is identical. (For example.
+suppose the world is a grid with square obstacles.) What kind of problem does the agent
+now face? What do solutions look like?
+
+4.13 In this exercise, we examine hill climbing in the context of robot navigation, using the
+environment in Figure 3.31 as an example.
+a. Repeat Exercise 4.11 using hill climbing. Does your agent ever get stuck in a local
+minimum? Is it possible for it to get stuck with convex obstacles?
+b. Construct a nonconvex polygonal environment in which the agent gets stuck.
+c. Modify the hill-climbing algorithm so that, instead of doing a depth-1 search to decide
+where to go next, it does a depth- k search. It should find the best k-step path and do
+one step along it, and then repeat the process.
+d. Is there some k for which the new algorithm is guaranteed to escape from local minima?
+e. Explain how LRTA* enables the agent to escape from local minima in this case.
